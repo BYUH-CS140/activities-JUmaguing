@@ -12,19 +12,22 @@
   <header>
     <h1>How to Fold a Paper Airplane</h1>
     <nav>
-      <a href="#materials">Materials</a> | <a href="steps">Folding Steps</a> | <a href="#Tip">Tips</a>
+      <a href="#intro">Introduction</a>|<a href="#materials">Materials</a> | <a href="#steps">Folding Steps</a> | <a href="#Tip">Tips</a> <!-- Bug 6: Folding steps' href has no "#" character  --> 
+      
     </nav>
   </header>
-  <section id="intro">
+
+  <section id="intro"><!-- Bug 10: The intro section is not included inside the nav tag -->
     <h2>Introduction</h2>     <!--Bug 1: no closing h2 tag  -->
       <p>Folding a paper airplane is easy and fun! Follow these steps to create your own airplane.</p>
       <img src="airplane.png" alt="Paper Airplane">
   </section>
-  <section id=materials>
+
+  <section id="materials"><!-- Bug 7: No quotation mark -->
     <h2>Materials Needed</h2>
     <ul>
       <li>1 sheet of paper</li>
-      <l1>A flat surface to fold the paper</li> <!--Bug 2: Closing tag is wrongly spelled </l1> instead of </li>-->
+      <li>A flat surface to fold the paper</li> <!--Bug 2: Tags are misspelled </l1> instead of </li>-->
     </ul>
   </section>
   <section id="steps">
@@ -36,19 +39,21 @@
       <li>Fold the top edges again to the center.</li>
       <li>Fold the plane in half lengthwise.</li>
       <li>Fold the wings down, matching the top edges of the wings with the bottom edge of the body.</li>
-      </ul>
+    </ol> <!-- Bug 8 Wrong closing tag should be </ol> -->
   </section>
-  <section id="tips">
+  <section id="Tips"> <!-- Bug 9: id's are case sensitive it should be "Tip" -->
     <h2>Extra Tips</h2>
     <ul>
       <li>Make sure your folds are as sharp as possible.</li>
       <li>This airplane has stiff wings and can tolerate fast throwing speeds.</li>
+      <li>Throw it as hard as you can for maximum distance and speed.</li>  <!-- Bug 3: This list is outside the <ul> tag -->
     </ul>
-    <li>Throw it as hard as you can for maximum distance and speed.</li>
+  
   </section>
   <hr>
   <footer>
-    <a herf="www.foldnfly.com">Learn more about paper airplanes</a>
+    <a href="https://www.foldnfly.com">Learn more about paper airplanes</a>   <!-- Bug 4: Incomplete link and wrongly spelled href -->  <!-- Bug 5: No quotation mark-->
+  
     <p>&copy; 2024</p>
   </footer>
 </body>
