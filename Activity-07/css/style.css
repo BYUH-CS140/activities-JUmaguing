@@ -1,0 +1,10 @@
+.recipe{
+    color:red
+} /* set the recipe class font color to red */
+blockquote{
+    color:grey
+}/*set the font color to grey of the blockquote tag in the footer*/
+#mainHeader{
+    font-size: 40px; 
+    font-family: 'Courier New', Courier, monospace;
+} /*Change the mainHeader's font to Courier new*/
