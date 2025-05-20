@@ -1,10 +1,24 @@
 .recipe{
-    color:red
-} /* set the recipe class font color to red */
+    color:red/* set the recipe class font color to red */
+} 
 blockquote{
-    color:grey
-}/*set the font color to grey of the blockquote tag in the footer*/
+    color:grey /*set the font color to grey of the blockquote tag in the footer*/
+}
 #mainHeader{
-    font-size: 40px; 
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px; /*Set font size to 40pixel*/
+    font-family: 'Courier New', Courier, monospace;/*set the font to Courier New, if not available Courier then monospace*/
+    color: white; /*set the font color to white*/
+    text-align: center; /*set the text to center*/
 } /*Change the mainHeader's font to Courier new*/
+
+body{
+    background-color: #e6e600;/*set the background to yellow*/
+}
+header{
+    background-color: orange;/*set the background to orange*/
+    padding: 10px 0; /*adds 10px to the overall size of the*/
+}
+footer{
+    background-color:#b3b306/*set the background to dark yellow*/
+    
+}
