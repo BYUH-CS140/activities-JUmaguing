@@ -16,7 +16,7 @@ body{
 }
 header{
     background-color: orange;/*set the background to orange*/
-    padding: 10px 0; /*adds 10px to the overall size of the*/
+    padding: 10px 0; /*adds 10px to the overall size of the header*/
 }
 footer{
     background-color:#b3b306/*set the background to dark yellow*/
