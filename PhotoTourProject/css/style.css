@@ -1,0 +1,70 @@
+body{
+    background-image:linear-gradient(rgb(53, 94, 6), black);
+    /* background-image:url(../images/Old-Vintage-Paper-Textured-background-Graphics-69116463-1.jpg); */
+    background-size: cover; 
+    background-position: center;
+}
+header{
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 50px;
+
+}
+hr{
+    background-color: black;
+    height:5px
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: left;
+    margin-left: 50px;
+    font-size: 24px;
+}
+img{
+    display: block;
+    margin:auto;
+    width: 800px;
+    height: auto;
+}
+p{
+    margin-left: 112px;
+    margin-right: 112px;
+    font-weight: bold; 
+    text-align: justify;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    
+}
+.nav li{
+    margin-right: 20px;
+    background-color: rgb(168, 132, 85) ;
+    padding: 3px;
+}
+.nav li a{
+    color: black;
+}
+.vintage li{
+    background-image: url(../images/handdrawn-black-brush-check-mark-600nw-399970768-removebg-preview.png);
+    background-size: 32px 32px; 
+    background-repeat: no-repeat; 
+    padding-left: 40px;
+    padding-top: 7px;
+}
+ul{
+    list-style-type: none;
+    margin-left: 220px;
+}
+.vintage{
+    background-image: url(../images/grunge-paper-background.png);
+    margin-left: 10%;
+    margin-right: 10%;
+    background-size:cover;
+}
