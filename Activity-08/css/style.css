@@ -31,8 +31,10 @@ header {
     width: cover;
 }
 
+
 .nav li {
     padding: 6px 50px;
+    
 }
 .nav li a {
     color: black;
@@ -42,6 +44,7 @@ header {
 
 .nav li:hover {
     background-color: #d2a86e;
+    border-bottom: 2px solid orange;
 }
 
 img{
