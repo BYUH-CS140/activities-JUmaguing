@@ -70,9 +70,11 @@ header {
 .dropdown:focus-within .dropdown_content {
   display: block;
 }
-body{
+
+body {
   background-color: #f9f9f9;
 }
+
 main {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -84,18 +86,20 @@ main {
   justify-content: space-between;
   gap: 30px;
 }
-#floatimage{
+
+#floatimage {
   display: block;
   margin-top: 10px;
 
 }
+
 img {
   margin-right: 10px;
   width: 30%;
   float: left;
 }
 
-footer{
+footer {
   display: block;
   bottom: 0;
   width: 100%;
