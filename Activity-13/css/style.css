@@ -1,0 +1,83 @@
+/* Base styles for screens < 768px */
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background: #fff;
+}
+
+main, header, footer {
+    font-size: 10px;
+}
+
+main, .header-content {
+    margin-left: 5px;
+}
+
+header, nav, footer {
+    background-color: black;
+    color: #f8f8f8;
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    width: 70%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: #f8f8f8;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #f8f8f8;
+    color: black;
+}
+
+/* Tablet breakpoint (≥ 768px) */
+@media (min-width: 768px) {
+    main, header, footer {
+        font-size: 12px;
+    }
+    header{
+        text-align: center;
+
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    img {
+        width: 30%;
+    }
+}
+
+/* Desktop breakpoint (≥ 1024px) */
+@media (min-width: 1024px) {
+    main, header {
+        font-size: 14px;
+    }
+    nav ul {
+        gap: 2rem;
+    }
+    img {
+        width: 30%;
+    }
+    footer {
+        text-align: center;
+    }
+}
