@@ -1,0 +1,242 @@
+/* Universal Box-Sizing for consistent layout */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles (Mobile-First - < 768px) */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    /* For mobile, use flexbox to stack sections vertically. */
+    display: flex;
+    flex-direction: column; /* Stacks items from top to bottom. */
+    min-height: 100vh; /* Ensures body takes at least full viewport height */
+}
+
+/* Common font sizes for mobile */
+main,
+header,
+footer,
+nav {
+    font-size: 10px;
+}
+
+/* Padding/margins for mobile */
+main,
+.header-content {
+    padding-left: 10px; /* Use padding instead of margin-left for better control */
+    padding-right: 10px;
+}
+
+header,
+nav,
+footer {
+    background-color: black;
+    color: #f8f8f8;
+    padding: 1rem; 
+    margin-bottom: 1rem; /* Space between sections on mobile */
+}
+
+/* Header specific styles */
+header .header-content {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; /* Remove default margin from H1 */
+}
+
+/* Navigation Styles (Flexbox) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Use flexbox for navigation items. */
+    flex-direction: column; /* Stack nav items vertically on mobile. */
+    gap: 0.5rem; /* Space between nav items. */
+    align-items: center; /* Center items horizontally in mobile nav. */
+}
+
+nav a {
+    color: #f8f8f8;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Add padding to make links easier to click */
+    display: block; /* Make links block-level for full clickable area */
+    border-radius: 4px; /* Slightly rounded corners for hover effect */
+}
+
+nav a:hover,
+nav a:focus { /* Added focus for accessibility */
+    background-color: #f8f8f8;
+    color: black;
+}
+
+/* Image Styles */
+img {
+    display: block; /* Ensures images behave as block elements */
+    width: 100%; /* Images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images cover their area without distortion */
+}
+
+/* Section for Columns (Dogs & Dogs II) - Mobile/Tablet Stacked */
+#columns {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+#columns div {
+    margin-bottom: 1rem; /* Space between columns on mobile/tablet */
+}
+
+/* Image Gallery Section (Flexbox) */
+#gallery {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+#gallery h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex; /* Use flexbox for the image grid. */
+    flex-wrap: wrap; /* Allows images to wrap to the next line if space is insufficient. */
+    gap: 10px; /* Space between images. */
+    justify-content: center; /* Center images horizontally within the container. */
+}
+
+.gallery-container .pic {
+    width: 100%; /* 1 image per row for mobile. */
+    /* On mobile, images take full width to display one per row. */
+}
+
+/* Pug Section */
+#pug-section {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+#pug-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Tablet breakpoint (min-width: 768px) */
+@media (min-width: 768px) { /* Styles apply when viewport width is 768px or wider. */
+    /* Adjust font sizes for tablet */
+    main,
+    header,
+    footer,
+    nav {
+        font-size: 12px;
+    }
+
+    /* Horizontal navigation for tablets */
+    nav ul {
+        flex-direction: row; /* Nav items align in a row. */
+        justify-content: center; /* Center nav items horizontally. */
+        gap: 1.5rem; /* Increase space between nav items. */
+    }
+
+    /* Columns section side-by-side */
+    #columns {
+        display: flex; /* Arrange columns side-by-side using flexbox. */
+        gap: 20px; /* Space between columns. */
+    }
+
+    #columns div {
+        flex: 1; /* Each column takes equal available space. */
+        margin-bottom: 0; /* Remove bottom margin as they are now side-by-side */
+    }
+
+    /* Image Gallery Styles for Tablet (2 images per row) */
+    .gallery-container .pic {
+        width: calc(50% - 5px); /* 2 images per row, accounting for half the gap. */
+        /* Each image takes roughly half the container width. */
+    }
+}
+
+/* Desktop breakpoint (min-width: 1024px) */
+@media (min-width: 1024px) { /* Styles apply when viewport width is 1024px or wider. */
+    /* Adjust font sizes for desktop */
+    main,
+    header,
+    footer,
+    nav {
+        font-size: 14px;
+    }
+
+    /* Reset base margins for grid */
+    header,
+    nav,
+    footer,
+    main {
+        margin-bottom: 0; /* Remove bottom margin to allow grid layout to control spacing */
+        padding: 0; /* Reset individual padding as grid-area will define it */
+    }
+
+    /* Desktop Layout Swap using CSS Grid */
+    body {
+        display: grid; /* Establish a grid container for the body. */
+        grid-template-areas:
+            "header header" /* Header spans both columns at the top. */
+            "nav main" /* Nav in left column, main in right. */
+            "footer footer"; /* Footer spans both columns at the bottom. */
+        grid-template-columns: 200px 1fr; /* Nav column is 200px, main column takes remaining space. */
+        grid-template-rows: auto 1fr auto; /* Rows for header, content, and footer. */
+        gap: 0; /* Removed gap from body to allow full background extension. */
+        min-height: 100vh; /* Ensure grid stretches to full viewport height */
+    }
+
+    /* Assign grid areas to elements. */
+    header {
+        grid-area: header;
+        padding: 1rem; /* Re-apply padding for content within header */
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: black;
+        padding: 1rem; /* Padding inside the nav column */
+        /* To make nav background extend fully, ensure it stretches in its grid area */
+        display: flex; /* Maintain flex for list items */
+        flex-direction: column; /* Stack nav items vertically on desktop */
+        align-items: flex-start; /* Align text to the start */
+        height: 100%; /* This is crucial for stretching the background vertically. */
+        /* The nav will fill the entire height of its grid cell. */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on desktop. */
+        align-items: flex-start; /* Align nav items to the start. */
+        gap: 1rem; /* Space between vertical nav items. */
+        width: 100%; /* Ensure ul takes full width of nav */
+    }
+
+    nav a {
+        width: 100%; /* Make nav links fill available width */
+    }
+
+    main {
+        grid-area: main;
+        padding: 1rem; /* Padding for the main content area */
+        overflow: auto; /* Add scroll if content exceeds grid area */
+    }
+
+    footer {
+        grid-area: footer;
+        padding: 1rem; /* Padding for the footer content */
+        text-align: center;
+    }
+
+    /* Image Gallery Styles for Desktop (3 images per row) */
+    .gallery-container .pic {
+        width: 32%/* 3 images per row, accounting for gap. */
+        /* Each image takes roughly one-third of the container width. */
+    }
+}
