@@ -1,0 +1,248 @@
+/* General body styling - Mobile First Defaults */
+body {
+    background-image: linear-gradient(rgb(53, 94, 6), black);
+    background-size: cover;
+    background-position: center;
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* Fallback font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Header styling - Mobile Default */
+header {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 30px; /* Base font size for mobile */
+    padding: 20px 0;
+}
+
+/* Specific adjustment for h1 within header on mobile */
+header h1 {
+    font-size: 1.8em;
+}
+
+/* Horizontal rule styling */
+hr {
+    background-color: black;
+    height: 5px;
+    border: none;
+}
+
+/* Heading 2 styling - Mobile Default */
+h2 {
+    text-align: center;
+    font-size: 1.5em; /* Base font size for mobile */
+    margin-top: 20px; /* Reduced margin for mobile */
+    margin-bottom: 15px; /* Reduced margin for mobile */
+}
+
+/* Heading 3 styling - Mobile Default */
+h3 {
+    text-align: left;
+    margin-left: 2%; /* Relative margin for mobile */
+    font-size: 1.1em; /* Base font size for mobile */
+}
+
+/* Image styling for responsiveness - Mobile Default */
+img {
+    display: block;
+    margin: auto;
+    max-width: 95%; /* Wider for mobile screens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph styling for responsiveness - Mobile Default */
+p {
+    margin: 10px 3%; /* Relative margins for mobile */
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 0.9em; /* Base font size for mobile */
+}
+
+/* Navigation bar styling - Mobile Default (stacked) */
+.nav {
+    display: flex;
+    flex-direction: column; /* Stack navigation items vertically */
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav li {
+    width: 80%; /* Make nav items take more width */
+    margin: 5px auto; /* Center them */
+    text-align: center;
+    background-color: rgb(168, 132, 85);
+    padding: 10px; /* Larger padding for touch targets */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Base font size for mobile nav */
+}
+
+.nav li:hover {
+    background-color: rgb(190, 150, 100);
+}
+
+.nav li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Vintage section styling - Mobile Default */
+.vintage {
+    background-image: url(../images/grunge-paper-background.png);
+    background-size: cover;
+    background-position: center;
+    margin: 10px 2%; /* Adjusted relative margins for mobile */
+    padding: 15px; /* Reduced padding for mobile */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+/* Styling for list items in vintage section (check marks) - Mobile Default */
+.vintage li {
+    background-image: url(../images/handdrawn-black-brush-check-mark-600nw-399970768-removebg-preview.png);
+    background-size: 20px 20px; /* Smaller check mark for mobile */
+    background-repeat: no-repeat;
+    padding-left: 25px; /* Adjusted padding */
+    padding-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1em; /* Base font size for mobile list items */
+    font-weight: bold;
+}
+
+/* General unordered list styling - Mobile Default */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2%; /* Relative margin for mobile lists */
+    margin-right: 2%;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-top: 20px; /* Adjusted margin for mobile */
+    font-size: 0.9em;
+}
+
+/* Media queries for responsiveness (Mobile-First Approach) */
+
+/* For screens wider than 480px (e.g., tablets and larger phones) */
+@media (min-width: 481px) {
+    header {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 2em; /* Reset h1 for larger screens */
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        margin-left: 3%;
+    }
+
+    p {
+        margin: 15px 5%;
+        font-size: 1em;
+    }
+
+    .nav {
+        flex-direction: row; /* Back to horizontal layout */
+        flex-wrap: wrap; /* Ensure wrapping on tablets if needed */
+        padding: 10px 0;
+    }
+
+    .nav li {
+        width: auto; /* Allow nav items to shrink */
+        margin: 5px 10px;
+        padding: 6px 12px;
+        font-size: 1em;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    .vintage {
+        margin: 15px 3%;
+        padding: 20px;
+    }
+
+    .vintage li {
+        font-size: 1.1em;
+        padding-left: 30px;
+        background-size: 25px 25px; /* Slightly larger check mark */
+    }
+
+    ul {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+/* For screens wider than 768px (e.g., desktops) */
+@media (min-width: 769px) {
+    header {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin-left: 5%;
+    }
+
+    p {
+        margin: 20px 10%;
+        font-size: 1.1em;
+    }
+
+    .nav li {
+        margin: 5px 15px;
+        padding: 8px 15px;
+        font-size: 1.1em;
+    }
+
+    .vintage {
+        margin: 20px 5%;
+        padding: 30px;
+    }
+
+    .vintage li {
+        font-size: 1.2em;
+        padding-left: 35px;
+    }
+
+    ul {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
