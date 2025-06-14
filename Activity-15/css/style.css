@@ -1,0 +1,293 @@
+/* General body styling - Mobile First Defaults */
+body {
+    background-image: linear-gradient(rgb(53, 94, 6), black); /* cite: 1 */
+    background-size: cover; /* cite: 1 */
+    background-position: center; /* cite: 1 */
+    color: white; /* Default text color */ /* cite: 1 */
+    font-family: Arial, sans-serif; /* Fallback font */ /* cite: 1 */
+    margin: 0; /* cite: 1 */
+    padding: 0; /* cite: 1 */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */ /* cite: 1 */
+}
+
+/* Header styling - Mobile Default */
+header {
+    font-family: 'Brush Script MT', cursive; /* cite: 1 */
+    text-align: center; /* cite: 1 */
+    font-size: 30px; /* Base font size for mobile */ /* cite: 1 */
+    padding: 20px 0; /* cite: 1 */
+}
+
+/* Specific adjustment for h1 within header on mobile */
+header h1 {
+    font-size: 1.8em; /* cite: 1 */
+}
+
+/* Horizontal rule styling */
+hr {
+    background-color: black; /* cite: 1 */
+    height: 5px; /* cite: 1 */
+    border: none; /* cite: 1 */
+}
+
+/* Heading 2 styling - Mobile Default */
+h2 {
+    text-align: center; /* cite: 1 */
+    font-size: 1.5em; /* Base font size for mobile */ /* cite: 1 */
+    margin-top: 20px; /* Reduced margin for mobile */ /* cite: 1 */
+    margin-bottom: 15px; /* Reduced margin for mobile */ /* cite: 1 */
+}
+
+/* Heading 3 styling - Mobile Default */
+h3 {
+    text-align: left; /* cite: 1 */
+    margin-left: 2%; /* Relative margin for mobile */ /* cite: 1 */
+    font-size: 1.1em; /* Base font size for mobile */ /* cite: 1 */
+}
+
+/* Image styling for responsiveness - Mobile Default */
+img {
+    display: block; /* cite: 1 */
+    margin: auto; /* cite: 1 */
+    max-width: 95%; /* Wider for mobile screens */ /* cite: 1 */
+    height: auto; /* cite: 1 */
+    border-radius: 8px; /* cite: 1 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* cite: 1 */
+}
+
+/* Paragraph styling for responsiveness - Mobile Default */
+p {
+    margin: 10px 3%; /* Relative margins for mobile */ /* cite: 1 */
+    font-weight: bold; /* cite: 1 */
+    text-align: justify; /* cite: 1 */
+    line-height: 1.6; /* cite: 1 */
+    font-size: 0.9em; /* Base font size for mobile */ /* cite: 1 */
+}
+
+/* Navigation bar styling - Mobile Default (stacked) */
+.nav {
+    display: flex; /* cite: 1 */
+    flex-direction: column; /* Stack navigation items vertically */ /* cite: 1 */
+    list-style: none; /* cite: 1 */
+    align-items: center; /* cite: 1 */
+    justify-content: center; /* cite: 1 */
+    padding: 10px 0; /* cite: 1 */
+    margin: 0; /* cite: 1 */
+    background-color: rgba(0, 0, 0, 0.5); /* cite: 1 */
+}
+
+.nav li {
+    width: 80%; /* Make nav items take more width */ /* cite: 1 */
+    margin: 5px auto; /* Center them */ /* cite: 1 */
+    text-align: center; /* cite: 1 */
+    background-color: rgb(168, 132, 85); /* cite: 1 */
+    padding: 10px; /* Larger padding for touch targets */ /* cite: 1 */
+    border-radius: 5px; /* cite: 1 */
+    transition: background-color 0.3s ease; /* cite: 1 */
+    font-size: 0.9em; /* Base font size for mobile nav */ /* cite: 1 */
+}
+
+.nav li:hover {
+    background-color: rgb(190, 150, 100); /* cite: 1 */
+}
+
+.nav li a {
+    color: black; /* cite: 1 */
+    text-decoration: none; /* cite: 1 */
+    font-weight: bold; /* cite: 1 */
+}
+
+/* Vintage section styling - Mobile Default */
+.vintage {
+    background-image: url(../images/grunge-paper-background.png); /* cite: 1 */
+    background-size: cover; /* cite: 1 */
+    background-position: center; /* cite: 1 */
+    margin: 10px 2%; /* Adjusted relative margins for mobile */ /* cite: 1 */
+    padding: 15px; /* Reduced padding for mobile */ /* cite: 1 */
+    border-radius: 10px; /* cite: 1 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* cite: 1 */
+    color: #333; /* cite: 1 */
+    display: flex; /* Changed to flex for internal column management */
+    flex-direction: column; /* Stacks header, content-wrapper, and footer */
+    align-items: center; /* Centers content horizontally within the vintage section */
+}
+
+.content-wrapper {
+    width: 100%; /* Take full width of parent */
+    display: flex;
+    flex-direction: column; /* Default to single column for mobile */
+}
+
+.column-item {
+    margin-bottom: 20px; /* Spacing between items in single column */
+}
+
+/* Styling for list items in vintage section (check marks) - Mobile Default */
+.vintage li {
+    background-image: url(../images/handdrawn-black-brush-check-mark-600nw-399970768-removebg-preview.png); /* cite: 1 */
+    background-size: 20px 20px; /* Smaller check mark for mobile */ /* cite: 1 */
+    background-repeat: no-repeat; /* cite: 1 */
+    padding-left: 25px; /* Adjusted padding */ /* cite: 1 */
+    padding-top: 5px; /* cite: 1 */
+    margin-bottom: 10px; /* cite: 1 */
+    font-size: 1em; /* Base font size for mobile list items */ /* cite: 1 */
+    font-weight: bold; /* cite: 1 */
+}
+
+/* General unordered list styling - Mobile Default */
+ul {
+    list-style-type: none; /* cite: 1 */
+    padding: 0; /* cite: 1 */
+    margin-left: 2%; /* Relative margin for mobile lists */ /* cite: 1 */
+    margin-right: 2%; /* cite: 1 */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* cite: 1 */
+    padding: 20px; /* cite: 1 */
+    background-color: rgba(0, 0, 0, 0.7); /* cite: 1 */
+    color: white; /* cite: 1 */
+    margin-top: 20px; /* Adjusted margin for mobile */ /* cite: 1 */
+    font-size: 0.9em; /* cite: 1 */
+}
+
+/* Media queries for responsiveness (Mobile-First Approach) */
+
+/* For screens wider than 480px (e.g., tablets and larger phones) */
+@media (min-width: 481px) {
+    header {
+        font-size: 40px; /* cite: 1 */
+    }
+
+    h1 {
+        font-size: 2em; /* Reset h1 for larger screens */ /* cite: 1 */
+    }
+
+    h2 {
+        font-size: 1.8em; /* cite: 1 */
+        margin-top: 30px; /* cite: 1 */
+        margin-bottom: 20px; /* cite: 1 */
+    }
+
+    h3 {
+        font-size: 1.3em; /* cite: 1 */
+        margin-left: 3%; /* cite: 1 */
+    }
+
+    p {
+        margin: 15px 5%; /* cite: 1 */
+        font-size: 1em; /* cite: 1 */
+    }
+
+    .nav {
+        flex-direction: row; /* Back to horizontal layout */ /* cite: 1 */
+        flex-wrap: wrap; /* Ensure wrapping on tablets if needed */ /* cite: 1 */
+        padding: 10px 0; /* cite: 1 */
+    }
+
+    .nav li {
+        width: auto; /* Allow nav items to shrink */ /* cite: 1 */
+        margin: 5px 10px; /* cite: 1 */
+        padding: 6px 12px; /* cite: 1 */
+        font-size: 1em; /* cite: 1 */
+    }
+
+    img {
+        max-width: 90%; /* cite: 1 */
+    }
+
+    .vintage {
+        margin: 15px 3%; /* cite: 1 */
+        padding: 20px; /* cite: 1 */
+    }
+
+    .vintage li {
+        font-size: 1.1em; /* cite: 1 */
+        padding-left: 30px; /* cite: 1 */
+        background-size: 25px 25px; /* Slightly larger check mark */ /* cite: 1 */
+    }
+
+    ul {
+        margin-left: 3%; /* cite: 1 */
+        margin-right: 3%; /* cite: 1 */
+    }
+
+    footer {
+        margin-top: 30px; /* cite: 1 */
+    }
+
+    /* Two-column layout for medium devices */
+    .content-wrapper {
+        flex-direction: row; /* Change to horizontal layout */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: space-around; /* Distribute items with space around them */
+        align-items: flex-start; /* Align items to the top of the container */
+    }
+
+    .column-item {
+        flex: 1 1 45%; /* Allow items to grow/shrink, base width of 45% for two columns with spacing */
+        margin: 10px; /* Spacing between columns */
+        max-width: 45%; /* Ensure no more than two columns */
+    }
+
+    /* Adjust specific items within columns for medium screens if needed */
+    .column-item img {
+        margin: 0 auto; /* Center image within its column */
+    }
+}
+
+/* For screens wider than 768px (e.g., desktops) */
+@media (min-width: 769px) {
+    header {
+        font-size: 50px; /* cite: 1 */
+    }
+
+    h2 {
+        font-size: 2em; /* cite: 1 */
+    }
+
+    h3 {
+        font-size: 1.5em; /* cite: 1 */
+        margin-left: 5%; /* cite: 1 */
+    }
+
+    p {
+        margin: 20px 10%; /* cite: 1 */
+        font-size: 1.1em; /* cite: 1 */
+    }
+
+    .nav li {
+        margin: 5px 15px; /* cite: 1 */
+        padding: 8px 15px; /* cite: 1 */
+        font-size: 1.1em; /* cite: 1 */
+    }
+
+    .vintage {
+        margin: 20px 5%; /* cite: 1 */
+        padding: 30px; /* cite: 1 */
+    }
+
+    .vintage li {
+        font-size: 1.2em; /* cite: 1 */
+        padding-left: 35px; /* cite: 1 */
+    }
+
+    ul {
+        margin-left: 5%; /* cite: 1 */
+        margin-right: 5%; /* cite: 1 */
+    }
+
+    /* Three-column layout for large devices */
+    .content-wrapper {
+        flex-direction: row; /* Ensure horizontal layout */
+        flex-wrap: nowrap; /* Prevent wrapping to maintain three columns */
+        justify-content: space-between; /* Distribute items with space between them */
+    }
+
+    .column-item {
+        flex: 1 1 30%; /* Allow items to grow/shrink, base width of 30% for three columns with spacing */
+        margin: 10px; /* Spacing between columns */
+        max-width: 30%; /* Ensure no more than three columns */
+    }
+}
