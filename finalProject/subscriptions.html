@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subscriptions - MangaREADER</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">MangaREADER</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search manga...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html">Log in</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" id="random-link">Random</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="subscriptions.html" class="active">Subscriptions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="manga-list">
+            <h2>My Subscriptions</h2>
+            <div class="manga-grid">
+                <!-- Each subscribed manga item is now a clickable link that will trigger a random redirect -->
+                <a href="#" class="manga-item-link random-manga-trigger">
+                    <div class="manga-item">
+                        <img src="https://placehold.co/200x300/4a5568/ffffff?text=Sub+1" alt="Subscribed Manga 1">
+                        <h3>Subscribed Manga 1</h3>
+                    </div>
+                </a>
+                <a href="#" class="manga-item-link random-manga-trigger">
+                    <div class="manga-item">
+                        <img src="https://placehold.co/200x300/4a5568/ffffff?text=Sub+2" alt="Subscribed Manga 2">
+                        <h3>Subscribed Manga 2</h3>
+                    </div>
+                </a>
+                <a href="#" class="manga-item-link random-manga-trigger">
+                    <div class="manga-item">
+                        <img src="https://placehold.co/200x300/4a5568/ffffff?text=Sub+3" alt="Subscribed Manga 3">
+                        <h3>Subscribed Manga 3</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MangaREADER. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>

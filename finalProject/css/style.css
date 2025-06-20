@@ -1,0 +1,308 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #e9e9e9; /* Light grey background for the page */
+    color: #333;
+}
+
+/* Header Styles */
+.top-header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.search-container input[type="text"] {
+    width: 60%;
+    max-width: 400px;
+    padding: 8px 10px;
+    border: 1px solid #444;
+    border-radius: 3px 0 0 3px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #ccc;
+    cursor: pointer;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.user-actions a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2c2c2c;
+    padding: 0 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the main content area */
+    min-height: 70vh;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the main content */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Manga Grid Display */
+.manga-list h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+.manga-item {
+    background-color: transparent;
+    text-align: center;
+}
+
+.manga-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manga-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.manga-item h3 {
+    margin: 10px 0 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Updated styles for manga links and titles */
+.manga-item-link {
+    text-decoration: none;
+    color: #333; /* Sets title color to default text color (black) */
+}
+
+.manga-item-link:hover h3 {
+    border-bottom: 2px solid #333; /* Adds a bottom border on hover */
+    display: inline-block; /* Ensures the border is only as wide as the text */
+    padding-bottom: 2px;
+}
+
+
+/* Forms Styling */
+.form-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center; /* This will center the button */
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* This keeps form labels and inputs left-aligned */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+button[type="submit"], #random-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    /* width: 100%; Removed to stop it from taking full width */
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover, #random-button:hover {
+    background-color: #555;
+}
+
+/* Random Page specific */
+.random-manga-section {
+    text-align: center;
+}
+
+/* Manga Details Page Styles */
+.manga-details-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+.manga-cover-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.manga-meta {
+    margin-top: 20px;
+}
+
+.manga-meta p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.manga-title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.manga-title-header h1 {
+    margin: 0;
+}
+
+.subscribe-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.subscribe-button:hover {
+    background-color: #c9302c;
+}
+
+.manga-description {
+    margin-top: 20px;
+}
+
+.chapter-list {
+    margin-top: 30px;
+}
+
+.chapter-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chapter-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.chapter-list li:hover {
+    background-color: #f9f9f9;
+}
+
+.chapter-list a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.chapter-list span {
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #aaa;
+    margin-top: 20px;
+}

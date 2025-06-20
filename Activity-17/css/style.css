@@ -61,7 +61,7 @@ button:hover {
   color: #28a745; /* Green for success */
   text-align: center;
   margin-top: 15px;
-}
+} 
 
 /* Desktop Styles using Media Query */
 @media (min-width: 768px) {

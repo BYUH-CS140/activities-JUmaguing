@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - MangaREADER</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">MangaREADER</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search manga...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html" class="active">Log in</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" id="random-link">Random</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Log In to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username or Email:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MangaREADER. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>

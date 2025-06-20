@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Details - MangaREADER</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">MangaREADER</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search manga...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html">Log in</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" id="random-link" class="active">Random</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="manga-details-layout">
+            <div class="manga-cover-container">
+                <img id="manga-cover-img" src="https://placehold.co/300x450/cccccc/ffffff?text=Loading..." alt="Manga Cover">
+                <div class="manga-meta">
+                    <p><strong>Author(s):</strong> <span id="manga-author"></span></p>
+                    <p><strong>Tag(s):</strong> <span id="manga-tags"></span></p>
+                    <p><strong>Type:</strong> <span id="manga-type"></span></p>
+                    <p><strong>Status:</strong> <span id="manga-status"></span></p>
+                    <p><strong>Released:</strong> <span id="manga-released"></span></p>
+                </div>
+            </div>
+            <div class="manga-info-container">
+                <div class="manga-title-header">
+                    <h1 id="manga-title">Loading...</h1>
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+                <div class="manga-description">
+                    <h2>Description</h2>
+                    <p id="manga-description"></p>
+                </div>
+                <div class="chapter-list">
+                    <h2>Chapter List</h2>
+                    <ul id="chapter-list-ul">
+                        <!-- Chapters will be populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MangaREADER. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- This inline script populates the page with the data stored in localStorage -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mangaDataString = localStorage.getItem('selectedManga');
+        if (mangaDataString) {
+            const manga = JSON.parse(mangaDataString);
+
+            document.title = `${manga.title} - MangaREADER`;
+
+            document.getElementById('manga-title').textContent = manga.title;
+            document.getElementById('manga-cover-img').src = manga.coverImage;
+            document.getElementById('manga-cover-img').alt = `${manga.title} Cover`;
+            
+            document.getElementById('manga-author').textContent = manga.author;
+            document.getElementById('manga-tags').textContent = manga.tags;
+            document.getElementById('manga-type').textContent = manga.type;
+            document.getElementById('manga-status').textContent = manga.status;
+            document.getElementById('manga-released').textContent = manga.released;
+
+            document.getElementById('manga-description').textContent = manga.description;
+
+            const chapterListUl = document.getElementById('chapter-list-ul');
+            chapterListUl.innerHTML = ''; 
+            manga.chapters.forEach(chapter => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#">${chapter.name}</a><span>${chapter.date}</span>`;
+                chapterListUl.appendChild(li);
+            });
+        } else {
+            document.querySelector('.manga-details-layout').innerHTML = '<h1>No manga selected. Click the "Random" link in the navigation to get a suggestion.</h1>';
+        }
+    });
+    </script>
+    
+    <!-- This is your main script file -->
+    <script src="./script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search - MangaREADER</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">MangaREADER</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search manga...">
+            <button type="submit">🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html">Log in</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" id="random-link">Random</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Advanced Search</h2>
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div class="form-group">
+                    <label>Genre:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="genre" value="action"> Action</label>
+                        <label><input type="checkbox" name="genre" value="comedy"> Comedy</label>
+                        <label><input type="checkbox" name="genre" value="fantasy"> Fantasy</label>
+                        <label><input type="checkbox" name="genre" value="romance"> Romance</label>
+                         <label><input type="checkbox" name="genre" value="slice-of-life"> Slice of Life</label>
+                    </div>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MangaREADER. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
