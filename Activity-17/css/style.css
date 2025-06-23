@@ -10,13 +10,14 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 600px;
     margin: 40px auto;
 }
 
-/* Mobile-First Styles */
+/* --- Mobile-First Styles (Default) --- */
+/* On small screens, elements will stack vertically by default */
 label {
-    display: block; /* Labels appear above inputs */
+    display: block; /* Makes the label a block-level element */
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -25,12 +26,12 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"] {
-    width: 100%; /* Inputs stretch to full width */
+    width: 100%; /* Inputs take the full width of the container */
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Space below the input */
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect final width */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
 }
 
 button {
@@ -42,6 +43,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -54,7 +56,7 @@ button:hover {
   font-size: 0.9em;
   margin-top: -10px;
   margin-bottom: 10px;
-  display: none; /* Hidden by default */
+  min-height: 1.2em; /* Reserve space to prevent layout shift */
 }
 
 .valid-feedback {
@@ -63,39 +65,57 @@ button:hover {
   margin-top: 15px;
 } 
 
-/* Desktop Styles using Media Query */
+/* --- Desktop Styles --- */
+/* Using a media query for screens 768px and wider */
 @media (min-width: 768px) {
     form {
         display: grid;
-        grid-template-columns: 1fr 2fr; /* Two columns: label and input */
-        grid-gap: 15px;
-        align-items: center; /* Vertically align label and input */
+        /* Create two columns: one for labels, one for inputs */
+        grid-template-columns: 1fr 2fr; 
+        column-gap: 20px; /* Space between columns */
+        row-gap: 15px; /* Space between rows */
+        align-items: center; /* Vertically align items in each row */
     }
 
-    label {
-        margin-bottom: 0; /* Reset margin for grid layout */
-        text-align: right; /* Align label text to the right */
-    }
-
+    /* Reset mobile margins for grid layout */
+    label,
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    input[type="password"] {
-        margin-bottom: 0; /* Reset margin for grid layout */
+    input[type="password"],
+    .feedback {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    /* Explicitly place elements into the grid columns */
+    label {
+        text-align: right; /* Align label text to the right */
+        grid-column: 1 / 2;
     }
     
-    /* Make feedback and button span both columns */
+    input {
+       grid-column: 2 / 3;
+    }
+    
+    /* Make feedback messages and buttons span both columns */
     .feedback,
-    button {
-        grid-column: 1 / -1; /* Span from first column to last */
+    button,
+    p {
+        grid-column: 1 / -1; /* Span from the first column to the last */
     }
 
-    /* Adjust margin for feedback messages in grid */
-    .feedback {
-      margin-top: 0;
+    /* Place feedback directly under the input field in the second column */
+    #usernameFeedback,
+    #emailFeedback,
+    #phoneNumFeedback,
+    #passwordFeedback {
+        grid-column: 2 / 3;
+        padding-left: 1px; /* Minor alignment adjustment */
     }
 
-    .valid-feedback {
-        margin-top: 5px;
+    /* Hide the empty paragraph tag on desktop view */
+    form p {
+        display: none;
     }
 }
