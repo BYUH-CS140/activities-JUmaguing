@@ -152,6 +152,7 @@ main {
 /* Forms Styling */
 .form-section {
     padding: 20px;
+    align-items: center;
 }
 
 /* Manga Details Page Styles - Mobile First */
