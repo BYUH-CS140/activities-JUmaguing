@@ -23,7 +23,9 @@ body {
     color: white;
     text-decoration: none;
 }
-
+.search{
+    background-color: #1a1a1a;
+}
 .search-container {
     width: 100%;
     display: flex;
@@ -151,9 +153,33 @@ main {
 
 /* Forms Styling */
 .form-section {
+    background: #333;
+    color: white;
     padding: 20px;
-    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
 }
+
+.login{
+    background-color: #1a1a1a;
+}
+.form-group>input{
+    width: 100%; /* Inputs take the full width of the container */
+    padding: 10px;
+    margin-bottom: 15px; /* Space below the input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+label {
+    display: block; /* Makes the label a block-level element */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 
 /* Manga Details Page Styles - Mobile First */
 .manga-details-layout {
