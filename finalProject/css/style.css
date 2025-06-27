@@ -12,9 +12,10 @@ body {
     color: white;
     padding: 10px 20px;
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .logo {
@@ -30,6 +31,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    order: 1;
 }
 
 .search-container input[type="text"] {
@@ -208,14 +210,14 @@ footer {
 /* --- Tablet Styles (min-width: 768px) --- */
 @media (min-width: 768px) {
     .top-header {
-        flex-direction: row; /* Horizontal layout for tablet */
-        justify-content: space-between;
+        flex-wrap: nowrap;
     }
 
     .search-container {
         width: auto;
         flex-grow: 1;
         padding: 0 20px;
+        order: 0;
     }
 
     nav ul {
